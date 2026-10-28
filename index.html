@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>733.uz | Amir Shukhratov</title>
+    <!-- Zamonaviy va toza shrift -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Umumiy sozlamalar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Yuqori qism - Logotip */
+        header {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #888;
+        }
+
+        /* Asosiy kontent */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .role {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .about {
+            font-size: 1rem;
+            color: #d1d1d1;
+            margin-bottom: 3rem;
+            max-width: 500px;
+            font-weight: 300;
+        }
+
+        /* Kontakt havolalari */
+        .contacts {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            font-size: 0.95rem;
+            color: #ffffff;
+            background-color: transparent;
+            border: 1px solid #333;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #ffffff;
+            color: #0f0f0f;
+            border-color: #ffffff;
+        }
+
+        /* Pastki qism */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        /* Responsiv dizayn (Mobil qurilmalar uchun) */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .contacts {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .contact-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">733.UZ</div>
+    </header>
+
+    <main>
+        <h1>Amir Shukhratov</h1>
+        <div class="role">Full-Stack JavaScript Developer</div>
+
+        <p class="about">
+            Xorazmlik dasturchi. Asosan Node.js, Express, React va Telegram botlar (REST API) bilan ishlab, turli xil
+            texnik jarayonlarni avtomatlashtirishga qiziqaman.
+        </p>
+
+        <div class="contacts">
+            <a href="https://t.me/xon733" target="_blank" class="contact-btn">Telegram</a>
+            <a href="https://github.com/shuxratov2024" target="_blank" class="contact-btn">GitHub</a>
+            <a href="https://x.com/uzb666" target="_blank" class="contact-btn">X (Twitter)</a>
+            <a href="https://linkedin.com/in/amir-shukhratov-39049a363" target="_blank" class="contact-btn">LinkedIn</a>
+            
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 733.uz. Barcha huquqlar himoyalangan.
+    </footer>
+
+</body>
+
+</html>
