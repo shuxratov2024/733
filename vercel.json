@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "admin.733.uz"
+        }
+      ],
+      "destination": "/admin.html"
+    }
+  ]
+}
