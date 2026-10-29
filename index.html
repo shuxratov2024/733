@@ -5,83 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>733.uz | Amir Shukhratov</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- ADMIN DOMENNI TEKSHIRISH VA YO'NALTIRISH (100% ISHLAYDI) -->
+    <script>
+        if (window.location.hostname === 'admin.733.uz') {
+            window.location.replace('/admin.html');
+        }
+    </script>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f0f0f;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            line-height: 1.6;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #0f0f0f; color: #ffffff; display: flex; flex-direction: column; min-height: 100vh; line-height: 1.6; }
         header { padding: 2rem; text-align: center; }
-        .logo {
-            font-size: 1.2rem; font-weight: 600;
-            letter-spacing: 2px; color: #888;
-        }
-        main {
-            flex: 1; display: flex; flex-direction: column;
-            align-items: center; padding: 2rem; max-width: 800px; margin: 0 auto;
-        }
+        .logo { font-size: 1.2rem; font-weight: 600; letter-spacing: 2px; color: #888; }
+        main { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 2rem; max-width: 800px; margin: 0 auto; }
         h1 { font-size: 3rem; font-weight: 600; margin-bottom: 0.5rem; letter-spacing: -1px; text-align: center; }
         .role { font-size: 1.1rem; color: #a0a0a0; margin-bottom: 2rem; font-weight: 300; text-align: center; }
-        .about {
-            font-size: 1rem; color: #d1d1d1; margin-bottom: 3rem;
-            max-width: 500px; font-weight: 300; text-align: center;
-        }
-        .contacts {
-            display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 4rem;
-        }
-        .contact-btn {
-            display: inline-block; padding: 0.8rem 2rem; font-size: 0.95rem;
-            color: #ffffff; background-color: transparent; border: 1px solid #333;
-            border-radius: 50px; text-decoration: none; transition: all 0.3s ease;
-        }
+        .about { font-size: 1rem; color: #d1d1d1; margin-bottom: 3rem; max-width: 500px; font-weight: 300; text-align: center; }
+        .contacts { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 4rem; }
+        .contact-btn { display: inline-block; padding: 0.8rem 2rem; font-size: 0.95rem; color: #ffffff; background-color: transparent; border: 1px solid #333; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; }
         .contact-btn:hover { background-color: #ffffff; color: #0f0f0f; border-color: #ffffff; }
         
-        /* MAQOLALAR BO'LIMI */
-        .articles-section {
-            width: 100%; max-width: 600px;
-        }
-        .section-title {
-            font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem;
-            color: #fff; border-bottom: 1px solid #333; padding-bottom: 0.5rem;
-        }
-        .article-card {
-            display: block; text-decoration: none; color: inherit;
-            padding: 1.5rem; background: #151515; border: 1px solid #222;
-            border-radius: 12px; margin-bottom: 1rem; transition: 0.3s;
-        }
+        /* MAQOLALAR DIZAYNI */
+        .articles-section { width: 100%; max-width: 600px; }
+        .section-title { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: #fff; border-bottom: 1px solid #333; padding-bottom: 0.5rem; }
+        .article-card { display: block; text-decoration: none; color: inherit; padding: 1.5rem; background: #151515; border: 1px solid #222; border-radius: 12px; margin-bottom: 1rem; transition: 0.3s; }
         .article-card:hover { border-color: #555; transform: translateY(-3px); }
         .article-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; color: #fff; }
         .article-date { font-size: 0.85rem; color: #777; margin-bottom: 0.5rem; }
         .article-desc { font-size: 0.95rem; color: #aaa; font-weight: 300; }
+        .no-articles { text-align: center; color: #666; font-style: italic; }
 
         footer { padding: 2rem; text-align: center; font-size: 0.85rem; color: #555; }
-        
-        @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
-            .contacts { flex-direction: column; gap: 1rem; width: 100%; max-width: 300px; }
-            .contact-btn { width: 100%; text-align: center; }
-        }
+        @media (max-width: 600px) { h1 { font-size: 2.2rem; } .contacts { flex-direction: column; gap: 1rem; width: 100%; max-width: 300px; } .contact-btn { width: 100%; text-align: center; } }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">733.UZ</div>
-    </header>
+    <header><div class="logo">733.UZ</div></header>
 
     <main>
         <h1>Amir Shukhratov</h1>
         <div class="role">Full-Stack JavaScript Developer</div>
-
-        <p class="about">
-            Xorazmlik dasturchi. Asosan Node.js, Express, React va Telegram botlar (REST API) bilan ishlab, turli xil
-            texnik jarayonlarni avtomatlashtirishga qiziqaman.
-        </p>
+        <p class="about">Xorazmlik dasturchi. Asosan Node.js, Express, React va Telegram botlar (REST API) bilan ishlab, turli xil texnik jarayonlarni avtomatlashtirishga qiziqaman.</p>
 
         <div class="contacts">
             <a href="https://t.me/xon733" target="_blank" class="contact-btn">Telegram</a>
@@ -90,29 +56,37 @@
             <a href="https://linkedin.com/in/amir-shukhratov-39049a363" target="_blank" class="contact-btn">LinkedIn</a>
         </div>
 
-        <!-- YANGLI QO'SHILGAN MAQOLALAR QISMI -->
-        <div class="articles-section" id="maqolalar">
+        <!-- MAQOLALAR SHU YERGA AVTOMAT TUSHADI -->
+        <div class="articles-section">
             <h2 class="section-title">Maqolalar</h2>
-            
-            <!-- Maqola 1 (Backenddan shu formatda keladi) -->
-            <a href="#" class="article-card">
-                <div class="article-title">Node.js da API yaratish sirlari</div>
-                <div class="article-date">29 Oktyabr, 2026</div>
-                <div class="article-desc">Express.js yordamida tezkor va xavfsiz REST API qurish bo'yicha amaliy maslahatlar...</div>
-            </a>
-
-            <!-- Maqola 2 -->
-            <a href="#" class="article-card">
-                <div class="article-title">Telegram bot arxitekturasi</div>
-                <div class="article-date">25 Oktyabr, 2026</div>
-                <div class="article-desc">Murakkab Telegram botlarni yaratishda PM2 va Webhooklardan to'g'ri foydalanish usullari.</div>
-            </a>
+            <div id="articles-container"></div>
         </div>
     </main>
 
-    <footer>
-        &copy; 2026 733.uz. Barcha huquqlar himoyalangan.
-    </footer>
+    <footer>&copy; 2026 733.uz. Barcha huquqlar himoyalangan.</footer>
 
+    <!-- Maqolalarni chizish uchun JS -->
+    <script>
+        const container = document.getElementById('articles-container');
+        // Backend o'rniga hozircha LocalStorage dan o'qiymiz
+        const articles = JSON.parse(localStorage.getItem('my_articles') || '[]');
+
+        if (articles.length === 0) {
+            container.innerHTML = '<p class="no-articles">Hozircha maqolalar yo\'q...</p>';
+        } else {
+            // Maqolalarni teskari (yangi birinchi) tartibda chiqaramiz
+            articles.reverse().forEach(article => {
+                const card = document.createElement('a');
+                card.href = "#"; 
+                card.className = 'article-card';
+                card.innerHTML = `
+                    <div class="article-title">${article.title}</div>
+                    <div class="article-date">${article.date}</div>
+                    <div class="article-desc">${article.desc}</div>
+                `;
+                container.appendChild(card);
+            });
+        }
+    </script>
 </body>
 </html>

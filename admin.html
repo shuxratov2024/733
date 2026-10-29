@@ -183,20 +183,25 @@
             const title = document.getElementById('title').value;
             const desc = document.getElementById('desc').value;
             const content = document.getElementById('content').value;
+            const date = new Date().toLocaleDateString('uz-UZ', { year: 'numeric', month: 'long', day: 'numeric' });
 
-            // Bu yerga Express REST API'ga so'rov yuborish kodi tushadi
-            console.log("Jo'natilmoqda:", { title, desc, content });
-            
             const btn = e.target.querySelector('button');
             btn.innerHTML = 'Saqlanmoqda...';
-            btn.style.opacity = '0.7';
 
             setTimeout(() => {
-                alert("Maqola muvaffaqiyatli saqlandi!");
+                // Eski maqolalarni olamiz
+                const articles = JSON.parse(localStorage.getItem('my_articles') || '[]');
+                
+                // Yangisini qo'shamiz
+                articles.push({ title, desc, content, date });
+                
+                // Qayta saqlaymiz
+                localStorage.setItem('my_articles', JSON.stringify(articles));
+
+                alert("Maqola muvaffaqiyatli saqlandi! Saytga o'tib ko'ring.");
                 e.target.reset();
-                btn.innerHTML = `<svg style="width: 18px; height: 18px; fill: currentColor;" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg> Chop etish`;
-                btn.style.opacity = '1';
-            }, 1000);
+                btn.innerHTML = `Chop etish`;
+            }, 500);
         });
     </script>
 </body>
